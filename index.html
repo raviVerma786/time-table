@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IV Sem Time Table</title>
     <style>
-        h2{
-            display: block;
-            width: auto;
-            height: auto;
-            margin: 3px auto;
+        #heading{
             text-align: center;
         }
         table{
@@ -20,6 +16,33 @@
             color: rgb(39, 41, 35);
             border-collapse: collapse;
             text-align: center;
+        }
+        #timetable{
+            display: flex;
+            align-items: center;
+            justify-content: center ;
+        }
+        th{
+            background-color: rgb(138, 236, 175);
+            height: 40px;
+        }
+        @media only screen and (max-width:430px) {
+            #heading{
+            font-size: 0.75rem;
+            text-align: center;
+        }
+            #timetable{
+            display: block;
+            width: 100vw;
+            height: 50vh;
+        }
+            table,th,td{
+            border: 1px solid;
+            }
+            th{
+            background-color: rgb(138, 236, 175);
+            height: 20px;
+        }
         }
         table,th,td{
             border: 2px solid;
@@ -37,9 +60,12 @@
     </style>
 </head>
 <body>
-    <h2>Time Table</h2>
-    <table>
-        <thead>
+    <div id="heading">
+        <h2>Time Table</h2>
+    </div>
+    <div id="timetable">
+        <table>
+            <thead>
             <tr>
                 <th>Time</th>
                 <th>Monday</th>
@@ -86,8 +112,8 @@
                <td>OS</td>
                <td>WT</td>
                <td>------</td>
-           </tr>
-           <tr>
+            </tr>
+            <tr>
                <td>13:20</td>
                <td>Lunch</td>
                <td>Lunch</td>
@@ -116,5 +142,6 @@
            </tr>
         </tbody>
     </table>
+</div>
 </body>
 </html>
